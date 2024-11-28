@@ -10,7 +10,7 @@ class Paper {
   currentpaperY = 0;
 
   init(paper) {
-    paper.addEventListener('onclick', (e) => {
+    paper.addEventListener('mousedown', (e) => {
       if (e.button === 0) { // Check for left mouse button
         this.holdingPaper = true;
 
@@ -49,7 +49,7 @@ class Paper {
       }
     });
 
-    window.addEventListener('onclick', (e) => {
+    window.addEventListener('mouseup', (e) => {
       console.log('Mouse is released');
       this.holdingPaper = false;
     });
